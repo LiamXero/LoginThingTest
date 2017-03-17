@@ -1,16 +1,31 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Test</title>
-	<script src="js/main.js"></script>
+<title>Test</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){	    
+	    var Timer = setInterval(function(){
+	    	var x = $("#timer").text();
+	    	$("#timer").text(x - 1);
+	    	x = x - 1;
+	    	if( x == 0 ){
+	    		clearInterval(Timer);
+	    	}
+	    }, 1000);
+	});
+
+    setTimeout(function(){
+       window.location='index.html';
+    }, 10500);
+
+</script>
 </head>
 <body>
 
+<p>Login Success! You shall be redirected to the homepage in:</p><p id="timer">10</p>
 
-	<h1>Login success!</h1>
-	<p>Redirecting you to homepage in 10 seconds!</p>
-
-	<button onclick="gotoindex(0.1)">Click here to skip the wait!</button>
+<input type="button" onclick="location.href='index.html';" value="Click to skip wait!" />
 
 </body>
 </html>
