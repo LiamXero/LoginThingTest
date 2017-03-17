@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Test</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){	    
+	    var Timer = setInterval(function(){
+	    	var x = $("#timer").text();
+	    	$("#timer").text(x - 1);
+	    	x = x - 1;
+	    	if( x == 0 ){
+	    		clearInterval(Timer);
+	    	}
+	    }, 1000);
+	});
+</script>
+</head>
+<body>
+
+<h1 id="timer">10</h1>
+
+</body>
+</html>
